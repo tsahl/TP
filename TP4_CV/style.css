@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.cv-container {
+    width: 60%;
+    margin: 40px auto;
+    background: white;
+    padding: 0px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-left: 8px solid hwb(249 12% 36% / 0.397); 
+    border-top: 5px solid hwb(249 12% 36% / 0.397);   
+    border-bottom: 5px solid hwb(249 12% 36% / 0.397); 
+    border-radius: 10px; 
+    position: relative;
+}
+
+.change-color-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+.change-color-btn:hover {
+    background-color: #0056b3;
+}
+
+#color-toggle {
+    display: none;
+}
+
+
+#color-toggle:checked ~ .cv-container {
+    background-color: black;
+    color: white;
+}
+
+#color-toggle:checked ~ .change-color-btn {
+    background-color: white;
+    color: black;
+}
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.touriya{
+    background-color: rgba(137, 132, 168, 0.397);
+
+}
+
+.photo img {
+
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.info h1 {
+    color: #004080;
+    margin: 0;
+}
+
+h2 {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+}
+
+.job h3 {
+    color: #004080;
+    margin-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.langues ul li {
+    font-size: 18px;
+}
