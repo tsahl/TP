@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcul Operations</title>
+</head>
+<body>
+    <button id="lancer">Lancer le calcul</button>
+    <script>
+        document.getElementById('lancer').addEventListener('click', function() {
+            // Demander à l'utilisateur de saisir deux nombres
+            let nombre1 = parseFloat(prompt("Entrez le premier nombre :"));
+            let nombre2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+    
+            // Vérifier si les entrées sont des nombres valides
+            if (isNaN(nombre1) || isNaN(nombre2)) {
+                console.log("Veuillez entrer des nombres valides.");
+            } else {
+                // Calculs
+                let somme = nombre1 + nombre2;
+                let difference = nombre1 - nombre2;
+                let produit = nombre1 * nombre2;
+                let quotient = nombre2 !== 0 ? (nombre1 / nombre2) : "Division par zéro impossible";
+    
+                // Affichage des résultats dans la console
+                console.log(`Somme : ${somme}`);
+                console.log(`Différence : ${difference}`);
+                console.log(`Produit : ${produit}`);
+                console.log(`Quotient : ${quotient}`);
+            }
+        });
+    </script>
+</body>
+</html>

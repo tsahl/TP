@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactif</title>
+</head>
+<body>
+    <h1>Quiz Interactif</h1>
+    <button onclick="lancerQuiz()">Démarrer le Quiz</button>
+    <p id="score"></p>
+
+    <script>
+        // Définition des questions et réponses
+        const QUESTIONS = [
+            ["Quelle est la capitale de la France ?", "Paris"],
+            ["Combien font 5 + 3 ?", "8"],
+            ["Quel est le plus grand océan du monde ?", "Pacifique"],
+            ["Qui a écrit 'Les Misérables' ?", "Victor Hugo"],
+            ["De quelle couleur est le ciel par temps clair ?", "Bleu"]
+        ];
+
+        function lancerQuiz() {
+            let score = 0; // Compteur des bonnes réponses
+            let totalQuestions = QUESTIONS.length; // Nombre total de questions
+
+            for (let i = 0; i < totalQuestions; i++) {
+                let userAnswer = prompt(QUESTIONS[i][0]); // Poser la question à l'utilisateur
+                if (userAnswer !== null && userAnswer.trim().toLowerCase() === QUESTIONS[i][1].toLowerCase()) {
+                    alert("Réponse juste !");
+                    score++; // Augmenter le score si la réponse est correcte
+                } else {
+                    alert("Réponse fausse !");
+                }
+            }
+
+            // Afficher le score final dans la page
+            document.getElementById("score").innerHTML = 
+                `Vous avez répondu correctement à ${score} questions sur ${totalQuestions}.`;
+        }
+    </script>
+</body>
+</html>
